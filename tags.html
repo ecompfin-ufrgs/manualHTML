@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8"/>
+<meta name="author" content="Nelson Seixas dos Santos"/>
+<meta name="description" content="Arquivo html de aprendizado onde escrevo um manual de HTML, isto é, um texto e não um hipertexto."/>
+<meta name="viewport" content="width=device-width"/>
+
+<title>Manual de principais tags HTML</title>
+
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/script.js" defer></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<header>
+<h1>Principais Tags HTML</h1>
+</header>
+<nav>
+
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="tags.html">Tags para os principais conteúdos</a></li>
+        <li><a href="modeloPaginaWeb.html">Modelo de página</a></li>
+</nav>
+
+<p>Esta página é a primeira página de estudo sobre HTML.  Seu objetivo é acostumar ao uso e a concepção do HTML como uma linguagem de marcação de hipertexto, isto é, texto que envolve imagens, videos, sons, em suma, texto acrescido de multimídia.<p>
+
+<p>Sendo o objetivo é escrever texto multimidia, <strong>HTML serve a diversos propósitos como artigos científicos e páginas iniciais de sítios na rede HTTP mundial, isto é, a Web</strong>.</p>
+
+<p> Para ver como estruturar o documento HTML que contém estas tags, clique <a href="estruturaDocumentoWeb.html">aqui</a>.
+
+<p>A referência básica para este estudo é <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element">Mozilla Developer Network</a>.</p>
+
+<h2>Incluindo caracteres especiais</h2>
+
+<p>Confira o link <a href= "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#character_references_including_special_characters_in_html">aqui</a>.</p>
+
+<p>Por exemplo, para escrever uma tag dentro de código HTML, é preciso usar o código do caracter especial para o sinal de maior e de menor como mostrado no código fonte desta página: &lt; p &gt;.</p>
+
+
+<h2> Comentários</h2>
+
+<p>Use a tag &lt; !-- texto do comentário --&gt; </p>
+
+<h2>Metadata</h2>
+
+<p>Metadata são dados que descrevem outros dados.  No caso, os metadados vão descrever os dados contidos na página, isto é, o conteúdo dos elementos</p>.
+
+<p> De modo geral, o padrão da tag meta é o seguinte: &lt;meta name="conteúdo" content="conteúdo" &gt;, onde existem vários valores para os atributos name e content, mas os mais comuns são <strong>author</strong> e <strong>description</strong>. </p>
+
+
+<h2>Incluindo código CSS e JavaScript</h2>
+
+<ul>
+<li>Para incluir código CSS , use a tage &lt;link&gt; com o atributo rel e href, isto é: &lt;link rel="stylesheet" href="endereço_web_do_arquivo_css" /&gt;</li>
+
+<li>Para incluir código JS, use &lt;script src="endereço_web_do_arquivo_JS" defer&gt;&lt;script&gt; </li>
+</ul>
+
+<h2>Incluindo citações dentro do parágrafo</h2>
+
+<h3>Citações dentro do parágrafo</h3>
+<p>Use o elemento &lt;q&gt;.  Este elemento admite o atributo &lt;cite&gt;, mas ele não serve para nada a menos de permitir apontar código JS para o elemento.</p>
+
+
+<h3>Citações em bloco</h3>
+
+<p>Use o elemento &lt;blockquote&gt;. Este elemento admite o atributo &lt;cite&gt;, mas ele não serve para nada a menos de permitir apontar código JS para o elemento.</p>
+
+<h3>Observação</h3>
+<p>O elemento &lt;cite&gt; serve apenas para mostrar que o elemento é um título de uma página. Se desejar apontar um link para o elemento, é necessário usar a tag &lt;a&gt;.</p>
+
+
+
+
+
+<h2>Abreviações</h2>
+
+<p>Use a tage &lt;abbr title="texto abreviado"&gt;</p>
+
+<abbr title="hypertext mark up language">HTML</abbr>
+
+
+<h2>Endereço de contato</h2>
+
+<p>Use a tage &lt;address&gt;.  É uma tag totalmente semântica, não provocando qualquer efeito no texto.</p>
+
+<h2>Sobrescrito e subscrito</h2>
+<p>Use as tags sup para sobrescrito e sub para subscrito.</p>
+
+
+
+<h2>Código de programação</h2>
+
+<p>Use as tags pre e code em conjunto para mostrar código.  Use a tag var para mostrar uma variável.  Veja o exemplo a seguir:</p>
+
+<pre><code>const para = document.querySelector('p');
+
+para.onclick = function() {
+  alert('Owww, stop poking me!');
+}</code></pre>
+
+<p>
+  Nâo use tags para mudar a apresentação do texto, tais como, center e font, dentro de pre ou code.
+</p>
+
+
+<p>Use a tag kbd para marcar um tecla do teclado e a tag samp para marcar uma saída de um programa.</p>
+
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+
+
+<h2>Marcando datas e horas</h2>
+<p>Use a tag time com o atributo datetime para designar o tipo de hora.</p>
+<time datetime="2016-01-20">20 January 2016</time>
+
+<h2>Incluindo imagens</h2>
+<p>Referência <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">link</a>
+<p> Use a tag &lt;img src="endereço_web_imagem" alt="texto descritivo da imagem." width="número" height="número"/&gt;</p>
+
+<p>Pode-se criar imagens com as seguintes tags</p>
+
+<ul>
+<li><strong>&lt;canvas&gt; </strong> - cria imagens 2D com API manipulada por meio de JS</li>
+<li><strong>&lt;svg&gt; </strong> - cria imagem 2D diretamente com HTML.  Veja detalhes <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">aqui</a></li>
+<li><strong>&lt;webgl&gt;</strong> - que fornece API JS criar imagens 3D no padrão OpenGL.</li>
+</ul>
+
+<h2>Incluindo videos</h2>
+<p>Use a tag &lt;video&gt; tal como se usa a tag img.  O controle da tag é usando uma API JS. Veja mais detalhes em <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">link</a>. Veja o exemplo abaixo:</p> 
+
+<video src="rabbit320.webm" controls>
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.webm">link to the video</a> instead.
+  </p>
+</video>
+
+
+<h2>Incluindo audio</h2>
+<p>Use a tag &lt;audio&gt; tal como se usa a tag img. O controle da tag é usando uma API JS.</p>
+
+<p>Veja a referência <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#the_audio_element">aqui</a>.
+
+<p>Veja também a tag webrtc para comunicação real-time de audio/video streaming com tráfego de dados entre cliente e servidor web.</p>
+
+<h2>Incluindo outros objetos</h2>
+
+<p>Pode-se incluir praticamente qualquer tipo de objeto em um código HTML com as tags apresentadas, tais como, arquivos pdf, mapas do Google etc.  As tags iframe, embed e object fornecem esta funcionalidade.  Para ver o detalhes, acesse <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">link</a></p>
+
+
+<h2>Incluindo tabelas</h2>
+
+<table>
+
+<tr>
+<th>cabeçalho 11</th>
+<th>cabeçalho 12</th>
+<th>cabeçalho 13</th>
+<th>cabeçalho 14</th>
+</tr>
+
+<tr>  
+<td>célula 11</td>
+  <td>célula 12</td>
+  <td>célula 13</td>
+  <td>célula 14</td>
+</tr>
+<tr>
+  <td>célula 21</td>
+  <td>célula 22</td>
+  <td>célula 23</td>
+  <td>célula 23</td>
+</tr>
+
+</table>
+
+
+<h2>Incluindo equações</h2>
+<p>Existem várias opções e a referência é <a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MDN Web Docs</a>.  Listo abaixo, em ordem de preferência, outras opções mencionadas ou não pela Mozilla.</p>
+
+<ul>
+<li><a href="https://www.mathjax.org/">Mathjax</a> - patrocinada pelo <a href="https://numfocus.org/">NumFocus</a></li>
+<li><a href="https://w3c.github.io/mathml-core/">MathML Core</a> - pretende-se padrão da web, mas é um tanto incompleto</li>
+<li><a href="https://w3c.github.io/mathml/">MathML</a> - serve para equações simples e é rápido, mas muito incompleto e difícil.</li>
+</ul> 
+
+<p>Para usar MathJax, faça o seguinte </p>
+
+<p>Basta incluir a tag abaixo no head do documento e escrever normalmente com latex.</p>
+
+&lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"&gt;&lt;/script&gt;
+
+<p>Veja o uso aqui:</p>
+
+<p> \begin{equation}a^2 = b^2 + c^2\end{equation}</p>
+<h2>Observação</h2>
+<p>O HTML é uma linguagem que possui a capacidade de descrever estruturas de dados chamadas <strong>elementos</strong> com sintaxe formada pelas tags.  Estes elementos possuem um conteúdo que o valor do dado armazenado.  O JS - que é uma linguagem de programaçaõ que suporta preferencialmente do paradigma funcional - fornece as funções que unidas aos elementos HTML formarão objetos no sentido de programação orientada a objetos, ou seja, as funções JS são os métodos dos objetos da linguagem orientada a objetos HTML+JS.  Ou seja, tudo se passa como se os atributos dos objetos fossem escritos com HTML e seus métodos com JS de tal forma que ambas as linguagens se complementam para formar uma única linguagem de programação orientada a objetos.</p>
+
+
+</body>

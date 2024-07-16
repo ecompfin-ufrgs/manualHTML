@@ -1,58 +1,70 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>My test page</title>
-    </head>
-    <body>
-        <h1>My main title</h1>
-        <h2>My top level heading</h2>
-        <h3> My subheading</h3>
-        <h4>My sub-subheading</h4>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="author" content="Nelson Seixas dos Santos"/>
+<meta name="description" content="Como estruturar um documento HTML."/>
+<meta name="viewport" content="width=device-width"/>
 
-        
-        
+<title>Como estruturar um documento HTML</title>
 
-        <!--Isto é um comentário HTML-->
-        <img src="images/entidade_aluno.jpg" alt="Entidade aluno no BD" />
-        
-        <p class="editor-note">My cat is <strong>very grumpy.</strong></p>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/script.js" defer></script>
+</head>
 
-        <h2>Lists</h2>
-        <p>
-            A lot of the web's content is lists and HTML has a special
-            element for these like it can be see below.
-        </p>
+<body>
+<header>
+<h1>Como estruturar um documento HTML</h1>
+</header>
 
-        <ul>
-            <li>Lista não ordenada usa bullets</li>
-            <li>Segundo elemento da lista não ordenada</li>
-        </ul>
+<nav>
 
-        <ol>
-            <li>Lista ordenada usa números.</li>
-            <li>Segundo elemento da lista ordenada.</li>
-        </ol>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="tags.html">Tags para os principais conteúdos</a></li>
+        <li><a href="modeloPaginaWeb.html">Modelo de página</a></li>
+</nav>
+<p>A referência para esta página é <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></p>
 
-        <p>At Mozilla, w're a global community of</p>
-        <ul>
-            <li>technologists</li>
-            <li>thinkers</li>
-            <li>builders</li>
-        </ul>
+<p>Depois de estruturar a página, para saber a tag adequada para o conteúdo que deseja criar, veja a seguinte página <a href="tags.html">Tags</a>.</p>
 
-        <h2>Links</h2>
-        <p>Links são incluídos com a tag  <strong>a</strong>.  Veja abaixo.</p>
-        <a href="https://www.mozilla.org/en-US/about/manifesto/">
-            Mozilla Manifesto
-        </a>
+<h2>Partes básicas de um documento HTML</h2>
+<ol>
+<li>header - tag header</li>
+<li>navigation bar - tag nav</li>
+<li>main - tag main</li>
+<li>sidebar - tag aside</li>
+<li>footer - tag footer</li>
+</ol>
 
-        <p>O link para o próximo material de estudo é
-            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">
-                CSS basics
-            </a>
-        </p>
 
-    </body>
+
+<p>O conteúdo do documento HTML exposto em &lt;main&gt; pode ser subdividido conforme o tipo de documento (artigo, página web etc) com as seguintes tags:</p>
+
+<ul>
+<li>article - semântica</li>
+<li>section - semântica</li>
+<li>div</li>
+</ul>
+
+<p>Assim, o main pode ter vários articles ou um único article se o documento for ele mesmo um artigo.  Alternativamente, um main pode ter várias section e, mesmo uma section, pode ter vários article ou um article várias section a depender de como for feita a divisão do documento.</p>
+
+<p>Minha recomendação é só usar section dentro de article ou dentro do main, mas não colocar article dentro de section.</p>
+
+<p>Veja o exemplo nesta <a href="modeloPaginaWeb.html">página web</a>:</p>
+
+<p>Considere também o uso da tag &lt;span&gt; para marcar parte do conteúdo de uma tag para posterior formatação.  Esta tag, porém, não é semântica e, na medida do possível, deve ser evitada, preferindo-se tags semânticas para o mesmo conteúdo. Igualmente, a tag &lt;div&gt; a qual serve como divisória não semântica de texto em oposição a article,section e outras tags estruturantes como nav.</p>
+
+<h2>Separando o documento com uma linha horizontal com a tag hr </h2>
+<p>Veja como colocar uma linha horizonta separando o documento, usando a tag &lt;hr /&gt; como a linha abaixo.</p>
+
+<hr />
+
+
+<p>Note que há uma linha horizontal separando o documento.</p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+</body>
 </html>
